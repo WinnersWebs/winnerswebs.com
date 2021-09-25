@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en-us">
+    <head>
+        <meta charsize="utf-8">
+        <meta name="description" content="Winners Webs helps small businesses win on the web, starting with Nothing Fancy Websites.">
+        <meta name="keywords" content="Winners Webs, Nothing Fancy Websites, small businesses, websites">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+        <meta http-equiv="content-language" content="en-us">
+        <title>Winners Webs</title>
+        <base href="https://winnerswebs.com/">
+        <link rel="icon" type="image/png" href="favicon.png">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+        <style>
+            html, body {width: 100%; height: 100%; background-color: #001e00; margin: 0;}
+            body {font-family: 'Open Sans', Arial, sans-serif;}
+            body, div {display: flex; align-items: center;flex-direction:column;}
+            p {font-size: 2.5rem; width: 50%; visibility: hidden;margin:auto;color:#fff;}
+            p img {cursor: pointer;}
+            a,em{color:#fff;}
+            img {vertical-align: middle;}
+            .nw {white-space: nowrap;}
+            #m {background-color: #001e00; z-index: 1; left: 0; top: 0; width: 100%; height: 100%; position: fixed; flex-direction: column;}
+            #md{width:100%;height:90%;}
+            #m,#wwLogo,#wwLogoEm,#nfwLogo,#nfwLogoEm{display: none;}
+            #mxd{width:100%;height:10%;display:flex;}
+            #mx{width:48px;height:48px;margin:auto;cursor:pointer;display:inline-block;}
+            #wwLogo,#nfwLogo {margin: auto auto 0; max-width: 30%; max-height: 50%;}
+            #m em {font-size: 1.5rem; margin: 1.25rem auto auto;}
+            @media screen and (max-width: 1280px) {
+                p {font-size: 2.25rem; width: 60%;}
+            }
+            @media screen and (max-width: 768px) {
+                p {font-size: 2rem; width: 70%;}
+                #m img {max-width: 50%;}
+                #m em {font-size: 1.25rem;}
+            }
+            @media screen and (max-width: 500px) {
+                p {font-size: 1.5rem; width: 80%;}
+                #m img {max-width: 60%;}
+                #m em {font-size: 1rem;}
+            }
+            @media screen and (max-width: 375px) {
+                p {font-size: 1.25rem; width: 90%;}
+                #m img {max-width: 70%;}
+            }
+            @media screen and (max-width: 325px) {
+                p {font-size: 1rem; width: 95%;}
+            }
+            @media screen and (max-height: 475px) and (max-width: 896px) {
+                p {font-size: 1.25rem;}
+            }
+            @media screen and (max-height: 320px) and (max-width: 896px) {
+                p {font-size: 1rem;}
+            }
+        </style>
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-4NYT4RD4GH"></script><script>window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-4NYT4RD4GH');</script>
+        <script>(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window, document, "clarity", "script", "5726erw039");</script>
+    </head>
+    <body>
+        <p>Winners Webs <img id="wwLogoIcon" src="winners-webs-logo-icon.png" alt="Winners Webs logo icon" onclick="displayModal(this)"> helps small businesses win on the web<span>,</span> starting with Nothing Fancy Websites <span class="nw"><img id="nfwLogoIcon" src="nothing-fancy-websites-logo-filled.png" alt="Nothing Fancy Websites logo icon" onclick="displayModal(this)">.</span> <span class="nw">Please visit</span> <a href="https://nothingfancywebsites.com">nothingfancywebsites.com</a> and check back here later in 2021 to win more on the web!</p>
+    </body>
+    <div id="m" role="dialog" data-nosnippet>
+        <div id="md">
+            <img id="wwLogo" src="winners-webs-logo.png" alt="Winners Webs logo"><em id="wwLogoEm">the Winners Webs logo</em>
+            <img id="nfwLogo" src="nothing-fancy-websites-logo-filled.png" alt="Nothing Fancy Websites logo"><em id="nfwLogoEm">the <span class="nw">Nothing Fancy Websites</span> logo</em>
+        </div>
+        <div id="mxd"><img id="mx" src="https://scb1.winnerswebs.com/close-icon-white.svg" alt="close icon" role="button"></div>
+    </div>
+    <script type="text/javascript">
+        const p = document.querySelector('p');
+        const wwLogoIcon = document.getElementById('wwLogoIcon');
+        const nfwLogoIcon = document.getElementById('nfwLogoIcon');
+        const wwLogo = document.getElementById('wwLogo');
+        const wwLogoEm = document.getElementById('wwLogoEm');
+        const nfwLogo = document.getElementById('nfwLogo');
+        const nfwLogoEm = document.getElementById('nfwLogoEm');
+        var visibility = 0;
+        function sizeImgs() {
+            let height = p.getElementsByTagName('span')[0].getBoundingClientRect().height + 'px';
+            wwLogoIcon.style.height = height;
+            wwLogoIcon.style.width = 'auto';
+            nfwLogoIcon.style.height = height;
+            nfwLogoIcon.style.width = 'auto';
+            if (visibility == 0) {
+                p.style.visibility = 'visible';
+                visibility = 1;
+            }
+        }
+        function displayModal(elem) {
+            let logo, em;
+            if (elem.src.indexOf('winners-webs') > -1) {
+                logo = wwLogo;
+                em = wwLogoEm;
+                wwLogo.style.display = 'inline-block';
+                wwLogoEm.style.display = 'block';
+            }
+            else {
+                logo = nfwLogo;
+                em = nfwLogoEm;
+                nfwLogo.style.display = 'inline-block';
+                nfwLogoEm.style.display = 'block';
+            }
+            m.style.display = 'flex';
+            setTimeout(function() {
+                window.onclick = function() {m.style.display = 'none'; logo.style.display = 'none'; em.style.display = 'none'; window.onclick = null;}
+            }, 200);
+        }
+        window.onload = window.onresize = function() {sizeImgs();}
+    </script>
+</html>
